@@ -1,0 +1,13 @@
+<div class="container">
+    <h3>Login</h3>
+
+    <label for="">Login</label>
+    <input type="text" [(ngModel)]="login"><br>
+    
+    <label for="">Password</label>
+    <input type="text" [(ngModel)]="password"><br>
+    
+    <button (click)="loginUser()">Login</button>
+
+    <p *ngIf="message" class="message">{{message}}</p>
+</div>

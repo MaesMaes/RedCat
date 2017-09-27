@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let book of books">
+        <td>{{book.name}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.category}}</td>
+        <td>
+            <button (click)="action(book.id, 'view')">View</button>
+            <button (click)="action(book.id, 'edit')">Edit</button>
+            <button (click)="action(book.id, 'delete')">Delete</button>
+        </td>
+    </tr>
+</table>
+
+<p *ngIf="actionLog">
+    Action: {{actionLog}}
+</p>
